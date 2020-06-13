@@ -34,40 +34,84 @@ and is wrapped around the whole page content, except for the footer in this exam
     <div class="slideshow-container">
 
          <div class="mySlides fade">
-              <img src="https://youth-time.eu/wp-content/uploads/2018/11/b7d41aa04e4da12ee42f355b9c8e1b10_XL.jpg" style="width:100%;height:300px">
+              <img src="{{ url_for('static', filename='images/b7d41aa04e4da12ee42f355b9c8e1b10_XL.jpg') }}" style="width:100%;height:320px">
          </div>
 
          <div class="mySlides fade">
-              <img src="https://connectforwater.org/wp-content/uploads/sites/2/2018/06/Ocean-pollution.jpg" style="width:100%;height:300px">
+              <img src="{{ url_for('static', filename='images/water-pollution-with-plastic-bags-ocean_1308-33491.jpg') }}" style="width:100%;height:320px">
          </div>
 
          <div class="mySlides fade">
-              <img src="https://image.freepik.com/free-vector/water-pollution-with-plastic-bags-ocean_1308-33491.jpg" style="width:100%;height:300px">
+              <img src="{{ url_for('static', filename='images/images (5).jpg') }}" style="width:100%;height:320px">
+         </div>
+          
+         <div class="mySlides fade">
+              <img src="{{ url_for('static', filename='images/save.jpg') }}" style="width:100%;height:320px">
+         </div> 
+
+         <div class="mySlides fade">
+              <img src="{{ url_for('static', filename='images/Garbage-Sorting.jpg') }}" style="width:100%;height:320px">
          </div>
 
          <div class="mySlides fade">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyAcWKae0f2doje6ZQx4OKlGsQZMgmHZ7VRuBkFvvhSFv1e03Z&usqp=CAU" style="width:100%;height:300px">
-         </div>
-
-         <div class="mySlides fade">
-              <img src="https://www.newsecuritybeat.org/wp-content/uploads/2017/08/Garbage-Sorting.jpg" style="width:100%;height:300px">
-         </div>
-
-         <div class="mySlides fade">
-             <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/FA66/production/_107720146_gettyimages-1159412673-594x594.jpg" style="width:100%;height:300px">
+             <img src="{{ url_for('static', filename='images/_107720146_gettyimages-1159412673-594x594.jpg') }}" style="width:100%;height:320px">
          </div>
 
     </div>
      <br>
 
-    <div class="container">
+    <div class="container" >
       <h3><b>Garbage Classification</b></h3>
       <h5><span class="opacity">June 11, 2020</span></h5>
     </div>
 
     <div class="container">
-      <p>The present way of separating waste/garbage is the hand-picking method, whereby someone is employed to separate out the different objects/materials. The person, who separate waste, is prone to diseases due to the harmful substances in the garbage. With this in mind, it motivated us to develop an automated system which is able to sort the waste  and this system can take short time to sort the waste, and it will be more accurate in sorting than the manual way. With the system in place, the beneficial separated waste can still be recycled and converted to energy and fuel for the growth of the economy. The system that is developed for the separation of the accumulated waste is based on
-the combination of Convolutional Neural Network with recognition and classification.</p>
+      <p align="justify">The present way of separating waste/garbage is the <b>hand-picking method</b>, whereby someone is employed to separate out the different objects/materials. The person, who separate waste, is <b>prone to diseases</b> due to the harmful substances in the garbage. With this in mind, it motivated us to develop an automated system which is able to sort the waste  and this system can take short time to sort the waste, and it will be more accurate in sorting than the manual way. With the system in place, the beneficial separated waste can still be recycled and converted to energy and fuel for the growth of the economy. The system that is developed for the separation of the accumulated waste is based on the combination of <b>Convolutional Neural Network with recognition and classification</b>.</p>
+
+      <p align="justify">
+        A computer vision approch to classify garbage into <b>recycling categories</b> could be an efficient way to process waste.The project aims to take garbage waste images and classify them into <b>six classes</b>: cardboard, glass, paper, metal, plastic and trash.We use garbage image database that contains around <b>2696 images</b> for each i.e 450 approx including train set and test set.In this project ,we  import the images in data generator library and configure the class and then apply the imagedatagenerator functionality then we import the model building libraries.Initialize the model, thn we add the layers ,first CNN and then dense .
+        then we have built the HTML web page and<br> 
+        For doing this we used :
+        <ol>
+          <li><b>Git</b></li>
+          <li><b>Git Hub</b></li>
+          <li><b>Python 3.7</b></li>
+          <li><b>Anaconda Spyder</b></li>
+          <li><b>Html5</b></li>
+          <li><b>CSS3</b></li>
+          <li><b>Java Script</b></li>
+          <li><b>Flask Framework</b></li>
+        </ol>
+     </p>
+     <p align="justify">
+       This code set shows how to differentiate the garbage type by pulling it aside on the basis of 2696 images we have uploaded and discribed which will be recognised by CNN. the six type of garbages are : cardboard,glass,paper,metal,plastic and trash.<br>
+       On the basis of recognition the model differentiate the garbage.which is possibly harmful or hazardious to humans labours.<br>
+       The main purpose of garbage collection system is to provide another way for the laboures for reducing the hand picking method and giving the e-waste materials.<br>
+       The goals for the system are:
+      <ul>
+        <li><b>to make the waste separate by image identification</b></li>
+        <li><b>to rescue electronic material by recycling or deploy</b></li>
+        <li><b>to decrease the mixing of waste material from every household</b></li>
+      </ul>
+     </p> 
+     <p align="justify">
+        <h6><b>Object Recognition:</b></h6>     
+        After  detection  and  segmentation, the images of the objects are fed into the trained CNN for recognition and labeling purposes. The output of the CNN-based model along with a few labeled objects as shown below: -
+     </p>
+    
+     <div >
+       <img src="{{ url_for('static', filename='images/images (3).jfif') }}" style="width:80px;height:80px;margin-left: 30px">
+       <img  src="{{ url_for('static', filename='images/images (1).jfif') }}" style="width:80px;height:80px;margin-left: 40px">
+       <img src="{{ url_for('static', filename='images/images.jfif') }}" style="width:80px;height:80px;margin-left: 40px">
+
+       <img src="{{ url_for('static', filename='images/images (2).jfif') }}" style="width:80px;height:80px;margin-left: 40px">
+       <img src="{{ url_for('static', filename='images/download.jfif') }}" style="width:80px;height:80px;margin-left: 40px">
+
+       <img src="{{ url_for('static', filename='images/images (4).jfif') }}" style="width:80px;height:80px;margin-left: 40px"><br>
+       <b> &nbsp; &nbsp; 1). Cardboard  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2). Glass &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3). Metal &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4). Paper &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5). Plastic &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6). Trash</b>
+
+     </div>
+
     <div class="row1">
       <div class="col m8 s12">
         </div>
